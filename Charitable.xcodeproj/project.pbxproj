@@ -12,6 +12,7 @@
 		29B3A2871EEB292400B70FAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29B3A2851EEB292400B70FAA /* Main.storyboard */; };
 		29B3A2891EEB292400B70FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29B3A2881EEB292400B70FAA /* Assets.xcassets */; };
 		29B3A28C1EEB292400B70FAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29B3A28A1EEB292400B70FAA /* LaunchScreen.storyboard */; };
+		B95258D41FE5713E0330FFFE /* Pods_Charitable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40E18766AE42CCA4A719774 /* Pods_Charitable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		29B3A2881EEB292400B70FAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		29B3A28B1EEB292400B70FAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		29B3A28D1EEB292400B70FAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C53F4679DF5638E4828BD4C /* Pods-Charitable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charitable.release.xcconfig"; path = "Pods/Target Support Files/Pods-Charitable/Pods-Charitable.release.xcconfig"; sourceTree = "<group>"; };
+		7A0C2308604FD35E7D984E8C /* Pods-Charitable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Charitable.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Charitable/Pods-Charitable.debug.xcconfig"; sourceTree = "<group>"; };
+		A40E18766AE42CCA4A719774 /* Pods_Charitable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Charitable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B95258D41FE5713E0330FFFE /* Pods_Charitable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09F9C6C1651EA9AFB5CFC4E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A40E18766AE42CCA4A719774 /* Pods_Charitable.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11ED3B6F6E21F85D7F18448B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A0C2308604FD35E7D984E8C /* Pods-Charitable.debug.xcconfig */,
+				4C53F4679DF5638E4828BD4C /* Pods-Charitable.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		29B3A2751EEB292400B70FAA = {
 			isa = PBXGroup;
 			children = (
 				29B3A2801EEB292400B70FAA /* Charitable */,
 				29B3A27F1EEB292400B70FAA /* Products */,
+				11ED3B6F6E21F85D7F18448B /* Pods */,
+				09F9C6C1651EA9AFB5CFC4E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29B3A2901EEB292400B70FAA /* Build configuration list for PBXNativeTarget "Charitable" */;
 			buildPhases = (
+				159CE522D6B648719EB25646 /* [CP] Check Pods Manifest.lock */,
 				29B3A27A1EEB292400B70FAA /* Sources */,
 				29B3A27B1EEB292400B70FAA /* Frameworks */,
 				29B3A27C1EEB292400B70FAA /* Resources */,
+				062032E0720551C1C8637CDB /* [CP] Embed Pods Frameworks */,
+				9876F03AC226CDF8B788D503 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		062032E0720551C1C8637CDB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Charitable/Pods-Charitable-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		159CE522D6B648719EB25646 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9876F03AC226CDF8B788D503 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Charitable/Pods-Charitable-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		29B3A27A1EEB292400B70FAA /* Sources */ = {
@@ -259,6 +334,7 @@
 		};
 		29B3A2911EEB292400B70FAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A0C2308604FD35E7D984E8C /* Pods-Charitable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K8YZSQZRNW;
@@ -272,6 +348,7 @@
 		};
 		29B3A2921EEB292400B70FAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C53F4679DF5638E4828BD4C /* Pods-Charitable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = K8YZSQZRNW;
